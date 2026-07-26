@@ -6,8 +6,7 @@ import { revalidatePath } from "next/cache";
 export async function fulfillOrder(orderId: string) {
   const supabase = createServerSupabaseClient();
 
-  const { error } = await supabase
-    .from("orders")
+  const { error } = await (supabase.from("orders") as any)
     .update({ status: "fulfilled" as const })
     .eq("id", orderId);
 
