@@ -49,7 +49,7 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <Link 
-              href="/shop/emerald-roastery" 
+              href="/shop/copper-hound" 
               className="w-full sm:w-auto bg-gray-950 text-white hover:bg-gray-900 active:scale-[0.98] px-8 py-4 rounded-2xl text-base font-black transition-all shadow-xl shadow-gray-950/10 flex items-center justify-center gap-2"
             >
               View Live Demo
@@ -164,11 +164,11 @@ export default function Home() {
               <h3 className="text-xl font-black text-gray-950 mb-6">Explore the Platform</h3>
               <div className="space-y-4">
                 <Link 
-                  href="/shop/emerald-roastery" 
+                  href="/shop/copper-hound" 
                   className="flex items-center justify-between p-5 bg-white rounded-2xl border border-gray-100 hover:border-emerald-200 hover:shadow-sm transition-all group"
                 >
                   <div>
-                    <h4 className="font-bold text-gray-950 group-hover:text-emerald-600 transition-colors">Emerald Roastery Shopfront</h4>
+                    <h4 className="font-bold text-gray-950 group-hover:text-emerald-600 transition-colors">Copper Hound Shopfront</h4>
                     <p className="text-xs text-gray-500 mt-1">Browse products, test the guest checkout flow.</p>
                   </div>
                   <svg className="w-5 h-5 text-gray-400 group-hover:text-emerald-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" /></svg>
