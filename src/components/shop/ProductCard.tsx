@@ -17,6 +17,7 @@ export function ProductCard({ product, onClick }: ProductCardProps) {
             src={product.image_url}
             alt={product.title}
             fill
+            unoptimized
             sizes="(max-width: 640px) 50vw, 240px"
             className="object-cover"
           />
