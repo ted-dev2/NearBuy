@@ -97,7 +97,7 @@ export function CartSidebar({ venue }: CartSidebarProps) {
         setErrorMsg("Stripe checkout could not be initialized.");
         setLoading(false);
       }
-    } catch (err: any) {
+    } catch (err) {
       console.error(err);
       setErrorMsg("An unexpected error occurred. Please try again.");
       setLoading(false);

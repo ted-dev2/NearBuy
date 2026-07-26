@@ -49,20 +49,17 @@ export async function createCheckoutSession({
 
     // Map cart items to Stripe line items
     const lineItems = cartItems.map((item) => {
-      const lineItem: any = {
+      const lineItem = {
         price_data: {
           currency: "usd",
           product_data: {
             name: item.title,
+            images: item.imageUrl ? [item.imageUrl] : undefined,
           },
           unit_amount: item.price, // Already in cents (e.g. 1899)
         },
         quantity: item.quantity,
       };
-
-      if (item.imageUrl) {
-        lineItem.price_data.product_data.images = [item.imageUrl];
-      }
 
       return lineItem;
     });
@@ -89,22 +86,7 @@ export async function createCheckoutSession({
       }))
     );
 
-    // Create the checkout session
-    const session = await stripe.checkout.sessions.create({
-      payment_method_types: ["card"],
-      line_items: lineItems,
-      mode: "payment",
-      customer_email: email,
-      success_url: `${origin}/shop/${venueSlug}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${origin}/shop/${venueSlug}`,
-      metadata: metadata,
-    });
-
-    if (!session.url) {
-      throw new Error("Stripe failed to return a checkout URL.");
-    }
-
-    // Insert order into Supabase
+    // Insert order into Supabase first to get an ID
     const supabase = createServerSupabaseClient();
     const totalAmount = cartItems.reduce(
       (sum, item) => sum + item.price * item.quantity,
@@ -112,22 +94,48 @@ export async function createCheckoutSession({
     );
 
     // Use any cast to bypass strict table name checking if inference is failing
-    const { error: orderError } = await (supabase.from("orders") as any).insert({
-      venue_id: venueId,
-      customer_email: email,
-      total_amount: totalAmount,
-      fulfillment_type: fulfillmentType,
-      status: "pending",
-      shipping_address: shippingAddress || null,
-    });
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const { data: orderData, error: orderError } = await (supabase.from("orders") as any)
+      .insert({
+        venue_id: venueId,
+        customer_email: email,
+        total_amount: totalAmount,
+        fulfillment_type: fulfillmentType,
+        status: "pending" as const,
+        shipping_address: shippingAddress || null,
+      })
+      .select()
+      .single();
 
     if (orderError) {
       console.error("Supabase Order Insertion Error:", orderError);
+      throw new Error("Failed to create order. Please try again.");
+    }
+
+    const orderId = orderData.id;
+
+    // Create the checkout session
+    const session = await stripe.checkout.sessions.create({
+      payment_method_types: ["card"],
+      line_items: lineItems,
+      mode: "payment",
+      customer_email: email,
+      success_url: `${origin}/success?order_id=${orderId}`,
+      cancel_url: `${origin}/shop/${venueSlug}`,
+      metadata: {
+        ...metadata,
+        orderId,
+      },
+    });
+
+    if (!session.url) {
+      throw new Error("Stripe failed to return a checkout URL.");
     }
 
     return { url: session.url };
-  } catch (error: any) {
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "An unexpected error occurred.";
     console.error("Stripe Session Creation Error:", error);
-    return { error: error.message || "An unexpected error occurred." };
+    return { error: message };
   }
 }
