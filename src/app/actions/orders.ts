@@ -6,8 +6,9 @@ import { revalidatePath } from "next/cache";
 export async function fulfillOrder(orderId: string) {
   const supabase = createServerSupabaseClient();
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const { error } = await (supabase.from("orders") as any)
-    .update({ status: "fulfilled" as const })
+    .update({ status: "fulfilled" })
     .eq("id", orderId);
 
   if (error) {

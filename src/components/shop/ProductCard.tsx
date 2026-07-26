@@ -10,7 +10,7 @@ type ProductCardProps = {
 
 export function ProductCard({ product, onClick }: ProductCardProps) {
   const CardContent = (
-    <article className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-xs transition hover:border-zinc-300 h-full flex flex-col">
+    <article className="overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-md hover:-translate-y-1 hover:shadow-md h-full flex flex-col">
       <div className="relative aspect-square w-full bg-zinc-100 shrink-0">
         {product.image_url ? (
           <Image
@@ -27,18 +27,18 @@ export function ProductCard({ product, onClick }: ProductCardProps) {
         )}
       </div>
 
-      <div className="flex-1 flex flex-col justify-between p-3 space-y-1">
+      <div className="flex-1 flex flex-col justify-between p-4 space-y-1.5">
         <div className="space-y-1">
-          <h3 className="line-clamp-2 text-sm font-semibold leading-snug text-zinc-900">
+          <h3 className="line-clamp-2 text-sm font-semibold leading-snug text-zinc-950">
             {product.title}
           </h3>
           {product.description ? (
-            <p className="line-clamp-2 text-xs leading-relaxed text-zinc-500">
+            <p className="line-clamp-2 text-xs leading-relaxed text-zinc-600">
               {product.description}
             </p>
           ) : null}
         </div>
-        <p className="pt-1.5 text-base font-bold text-[var(--venue-brand)]">
+        <p className="pt-1 text-base font-extrabold text-[var(--venue-brand)]">
           {formatPrice(product.price)}
         </p>
       </div>
@@ -50,7 +50,7 @@ export function ProductCard({ product, onClick }: ProductCardProps) {
       <button
         type="button"
         onClick={onClick}
-        className="w-full text-left h-full block focus:outline-hidden focus:ring-2 focus:ring-[var(--venue-brand)] focus:ring-offset-2 rounded-2xl transition"
+        className="group w-full text-left h-full block focus:outline-hidden focus:ring-2 focus:ring-[var(--venue-brand)] focus:ring-offset-2 rounded-2xl transition"
       >
         {CardContent}
       </button>
