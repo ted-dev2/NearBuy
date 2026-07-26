@@ -22,7 +22,7 @@ export default function Home() {
 
           <div className="flex items-center gap-4">
             <Link 
-              href="/shop/emerald-roastery" 
+              href="/shop/copper-hound" 
               className="bg-emerald-600 text-white hover:bg-emerald-700 active:scale-[0.98] px-5 py-2.5 rounded-xl text-sm font-bold transition-all shadow-lg shadow-emerald-600/10"
             >
               View Demo
