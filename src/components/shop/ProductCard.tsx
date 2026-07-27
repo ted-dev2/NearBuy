@@ -39,7 +39,7 @@ export function ProductCard({ product, onClick }: ProductCardProps) {
             </p>
           ) : null}
         </div>
-        <p className="pt-1 text-base font-extrabold text-[var(--venue-brand)]">
+        <p className="pt-1 text-base font-extrabold text-indigo-600">
           {formatPrice(product.price)}
         </p>
       </div>

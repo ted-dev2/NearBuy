@@ -71,7 +71,7 @@ export default function AdminQRPage() {
               >
                 <div className="w-full text-center mb-6">
                   <h2 className="text-2xl font-bold text-gray-800 truncate px-2">{venue.name}</h2>
-                  <p className="text-sm text-green-600 font-medium">/{venue.slug}</p>
+                  <p className="text-sm text-indigo-600 font-medium">/{venue.slug}</p>
                 </div>
                 
                 <div className="bg-white p-4 rounded-xl border border-gray-100 shadow-inner mb-8 bg-gradient-to-br from-white to-gray-50">
@@ -86,7 +86,7 @@ export default function AdminQRPage() {
 
                 <button
                   onClick={() => downloadQR(venue.slug)}
-                  className="w-full bg-gray-900 text-white py-3 px-6 rounded-xl font-semibold hover:bg-gray-800 active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+                  className="w-full bg-indigo-600 text-white py-3 px-6 rounded-xl font-semibold hover:bg-indigo-700 active:scale-[0.98] transition-all flex items-center justify-center gap-2"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />

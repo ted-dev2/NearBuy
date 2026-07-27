@@ -1,41 +1,18 @@
 import Link from "next/link";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white text-gray-900 selection:bg-emerald-500 selection:text-white">
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-xl bg-emerald-600 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-emerald-600/20">
-              N
-            </div>
-            <span className="font-black text-2xl tracking-tight text-gray-950">NearBuy</span>
-          </div>
-
-          <nav className="hidden md:flex items-center gap-8 text-sm font-bold text-gray-600">
-            <Link href="#features" className="hover:text-emerald-600 transition-colors">Features</Link>
-            <Link href="#how-it-works" className="hover:text-emerald-600 transition-colors">How it Works</Link>
-            <Link href="/admin/orders" className="hover:text-emerald-600 transition-colors">Merchant Dashboard</Link>
-            <Link href="/admin/qr" className="hover:text-emerald-600 transition-colors">QR Generator</Link>
-          </nav>
-
-          <div className="flex items-center gap-4">
-            <Link 
-              href="/shop/copper-hound" 
-              className="bg-emerald-600 text-white hover:bg-emerald-700 active:scale-[0.98] px-5 py-2.5 rounded-xl text-sm font-bold transition-all shadow-lg shadow-emerald-600/10"
-            >
-              View Demo
-            </Link>
-          </div>
-        </div>
-      </header>
+    <div className="min-h-screen bg-white text-gray-900 selection:bg-indigo-500 selection:text-white">
+      {/* Header Component */}
+      <Header />
 
       {/* Hero Section */}
-      <section className="relative pt-36 pb-24 md:pt-48 md:pb-32 overflow-hidden bg-gradient-to-b from-emerald-50/30 via-white to-white">
+      <section className="relative pt-36 pb-24 md:pt-48 md:pb-32 overflow-hidden bg-gradient-to-b from-indigo-50/30 via-white to-white">
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full text-xs font-black uppercase tracking-wider mb-8">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-xs font-black uppercase tracking-wider mb-8">
+            <span className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse" />
             Now Live for Local Merchants
           </div>
           
@@ -80,7 +57,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
             {/* Step 1 */}
             <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm relative flex flex-col items-start">
-              <div className="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-8 font-black text-xl">
+              <div className="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-8 font-black text-xl">
                 1
               </div>
               <h3 className="text-xl font-black text-gray-950 mb-3">Scan QR or click link</h3>
@@ -91,7 +68,7 @@ export default function Home() {
 
             {/* Step 2 */}
             <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm relative flex flex-col items-start">
-              <div className="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-8 font-black text-xl">
+              <div className="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-8 font-black text-xl">
                 2
               </div>
               <h3 className="text-xl font-black text-gray-950 mb-3">Pay instantly</h3>
@@ -102,7 +79,7 @@ export default function Home() {
 
             {/* Step 3 */}
             <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm relative flex flex-col items-start">
-              <div className="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-8 font-black text-xl">
+              <div className="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-8 font-black text-xl">
                 3
               </div>
               <h3 className="text-xl font-black text-gray-950 mb-3">Pickup locally or ship direct</h3>
@@ -131,7 +108,7 @@ export default function Home() {
 
               <div className="space-y-4">
                 <div className="flex gap-4">
-                  <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-1">
+                  <div className="w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center shrink-0 mt-1">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>
                   </div>
                   <div>
@@ -140,7 +117,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-1">
+                  <div className="w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center shrink-0 mt-1">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>
                   </div>
                   <div>
@@ -149,7 +126,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-1">
+                  <div className="w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center shrink-0 mt-1">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>
                   </div>
                   <div>
@@ -165,35 +142,35 @@ export default function Home() {
               <div className="space-y-4">
                 <Link 
                   href="/shop/copper-hound" 
-                  className="flex items-center justify-between p-5 bg-white rounded-2xl border border-gray-100 hover:border-emerald-200 hover:shadow-sm transition-all group"
+                  className="flex items-center justify-between p-5 bg-white rounded-2xl border border-gray-100 hover:border-indigo-200 hover:shadow-sm transition-all group"
                 >
                   <div>
-                    <h4 className="font-bold text-gray-950 group-hover:text-emerald-600 transition-colors">Copper Hound Shopfront</h4>
+                    <h4 className="font-bold text-gray-950 group-hover:text-indigo-600 transition-colors">Copper Hound Shopfront</h4>
                     <p className="text-xs text-gray-500 mt-1">Browse products, test the guest checkout flow.</p>
                   </div>
-                  <svg className="w-5 h-5 text-gray-400 group-hover:text-emerald-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" /></svg>
+                  <svg className="w-5 h-5 text-gray-400 group-hover:text-indigo-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" /></svg>
                 </Link>
 
                 <Link 
                   href="/admin/orders" 
-                  className="flex items-center justify-between p-5 bg-white rounded-2xl border border-gray-100 hover:border-emerald-200 hover:shadow-sm transition-all group"
+                  className="flex items-center justify-between p-5 bg-white rounded-2xl border border-gray-100 hover:border-indigo-200 hover:shadow-sm transition-all group"
                 >
                   <div>
-                    <h4 className="font-bold text-gray-950 group-hover:text-emerald-600 transition-colors">Merchant Dashboard</h4>
+                    <h4 className="font-bold text-gray-950 group-hover:text-indigo-600 transition-colors">Merchant Dashboard</h4>
                     <p className="text-xs text-gray-500 mt-1">View incoming orders, manage fulfillment.</p>
                   </div>
-                  <svg className="w-5 h-5 text-gray-400 group-hover:text-emerald-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" /></svg>
+                  <svg className="w-5 h-5 text-gray-400 group-hover:text-indigo-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" /></svg>
                 </Link>
 
                 <Link 
                   href="/admin/qr" 
-                  className="flex items-center justify-between p-5 bg-white rounded-2xl border border-gray-100 hover:border-emerald-200 hover:shadow-sm transition-all group"
+                  className="flex items-center justify-between p-5 bg-white rounded-2xl border border-gray-100 hover:border-indigo-200 hover:shadow-sm transition-all group"
                 >
                   <div>
-                    <h4 className="font-bold text-gray-950 group-hover:text-emerald-600 transition-colors">Printable QR Codes</h4>
+                    <h4 className="font-bold text-gray-950 group-hover:text-indigo-600 transition-colors">Printable QR Codes</h4>
                     <p className="text-xs text-gray-500 mt-1">Generate and download QR codes for physical tables.</p>
                   </div>
-                  <svg className="w-5 h-5 text-gray-400 group-hover:text-emerald-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" /></svg>
+                  <svg className="w-5 h-5 text-gray-400 group-hover:text-indigo-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" /></svg>
                 </Link>
               </div>
             </div>
@@ -201,16 +178,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-gray-100 bg-gray-50 py-12 text-center text-sm font-bold text-gray-400 uppercase tracking-widest">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p>© 2026 NearBuy Platform. All rights reserved.</p>
-          <div className="flex gap-6">
-            <Link href="/admin/orders" className="hover:text-gray-600">Dashboard</Link>
-            <Link href="/admin/qr" className="hover:text-gray-600">QR Generator</Link>
-          </div>
-        </div>
-      </footer>
+      {/* Footer Component */}
+      <Footer />
     </div>
   );
 }

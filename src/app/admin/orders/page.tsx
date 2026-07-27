@@ -32,8 +32,8 @@ export default async function AdminOrdersPage() {
     <div className="min-h-screen bg-gray-50 p-4 md:p-8">
       <div className="max-w-7xl mx-auto">
         <div className="mb-12">
-          <h1 className="text-4xl font-black text-gray-900 tracking-tight">Merchant Dashboard</h1>
-          <p className="text-gray-500 font-medium mt-2">Manage incoming orders and fulfillment.</p>
+          <h1 className="text-4xl font-black text-gray-950 tracking-tight">Merchant Dashboard</h1>
+          <p className="text-gray-600 font-medium mt-2">Manage incoming orders and fulfillment.</p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
@@ -156,7 +156,7 @@ function OrderCard({ order, showAction = false }: { order: OrderWithVenue; showA
           }}>
             <button
               type="submit"
-              className="w-full bg-gray-900 text-white py-4 rounded-2xl font-black hover:bg-black active:scale-[0.98] transition-all shadow-lg shadow-gray-200"
+              className="w-full bg-indigo-600 text-white py-4 rounded-2xl font-black hover:bg-indigo-700 active:scale-[0.98] transition-all shadow-lg shadow-indigo-600/20"
             >
               Mark as Fulfilled
             </button>

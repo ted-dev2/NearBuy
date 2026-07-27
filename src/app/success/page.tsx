@@ -114,14 +114,13 @@ export default async function SuccessPage({
 
           <Link 
             href={`/shop/${venue.slug}`}
-            className="group relative block w-full py-5 px-6 rounded-2xl font-black text-white transition-all hover:brightness-110 active:scale-[0.98] shadow-lg overflow-hidden"
-            style={{ backgroundColor: venue.brand_color_hex || "#10b981" }}
+            className="group relative block w-full py-5 px-6 rounded-2xl font-black text-white transition-all bg-indigo-600 hover:bg-indigo-700 active:scale-[0.98] shadow-lg shadow-indigo-600/20 overflow-hidden"
           >
             <span className="relative z-10">Back to {venue.name}</span>
             <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
           </Link>
           
-          <p className="mt-6 text-[10px] font-bold text-gray-300 uppercase tracking-[0.2em]">
+          <p className="mt-6 text-[10px] font-bold text-indigo-600 uppercase tracking-[0.2em]">
             Powered by NearBuy
           </p>
         </div>
