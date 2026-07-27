@@ -36,6 +36,7 @@ export function VenueShopfront({ venue, products }: VenueShopfrontProps) {
                 alt=""
                 fill
                 priority
+                unoptimized
                 sizes="(max-width: 512px) 100vw, 512px"
                 className="object-cover"
               />
@@ -51,6 +52,7 @@ export function VenueShopfront({ venue, products }: VenueShopfrontProps) {
                     src={venue.logo_url}
                     alt={`${venue.name} logo`}
                     fill
+                    unoptimized
                     sizes="88px"
                     className="object-cover"
                   />
