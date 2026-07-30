@@ -43,7 +43,7 @@ export function ProductCard({ product, onClick }: ProductCardProps) {
           <p className="text-xs text-zinc-400 font-light mb-1">
             Pickup available
           </p>
-          <p className="text-base font-extrabold text-indigo-600">
+          <p className="text-base font-extrabold text-accent">
             {formatPrice(product.price)}
           </p>
         </div>

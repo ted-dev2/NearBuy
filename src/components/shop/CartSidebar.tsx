@@ -197,7 +197,7 @@ export function CartSidebar({ venue }: CartSidebarProps) {
               </p>
               <button
                 onClick={() => setIsCartOpen(false)}
-                className="mt-6 rounded-full px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 transition-colors bg-indigo-600"
+                className="mt-6 rounded-full px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-zinc-800 transition-colors bg-zinc-900"
               >
                 Continue Browsing
               </button>
@@ -287,7 +287,7 @@ export function CartSidebar({ venue }: CartSidebarProps) {
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="you@example.com"
                     required
-                    className="w-full rounded-xl border border-zinc-200 bg-white px-3.5 py-2 text-sm text-zinc-900 placeholder-zinc-400 focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 outline-hidden transition shadow-3xs"
+                    className="w-full rounded-xl border border-zinc-200 bg-white px-3.5 py-2 text-sm text-zinc-900 placeholder-zinc-400 focus:border-accent focus:ring-1 focus:ring-accent outline-hidden transition shadow-3xs"
                   />
                   <p className="text-[10px] text-zinc-500">
                     We will send your order receipt and pickup details to this address.
@@ -344,7 +344,7 @@ export function CartSidebar({ venue }: CartSidebarProps) {
                           required={fulfillmentType === "ship"}
                           value={shippingAddress.line1}
                           onChange={(e) => handleShippingChange("line1", e.target.value)}
-                          className="w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 placeholder-zinc-400 focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 outline-hidden transition"
+                          className="w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 placeholder-zinc-400 focus:border-accent focus:ring-1 focus:ring-accent outline-hidden transition"
                         />
                       </div>
 
@@ -358,7 +358,7 @@ export function CartSidebar({ venue }: CartSidebarProps) {
                           placeholder="Apartment, suite, etc. (optional)"
                           value={shippingAddress.line2 || ""}
                           onChange={(e) => handleShippingChange("line2", e.target.value)}
-                          className="w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 placeholder-zinc-400 focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 outline-hidden transition"
+                          className="w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 placeholder-zinc-400 focus:border-accent focus:ring-1 focus:ring-accent outline-hidden transition"
                         />
                       </div>
 
@@ -374,7 +374,7 @@ export function CartSidebar({ venue }: CartSidebarProps) {
                             required={fulfillmentType === "ship"}
                             value={shippingAddress.city}
                             onChange={(e) => handleShippingChange("city", e.target.value)}
-                            className="w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 placeholder-zinc-400 focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 outline-hidden transition"
+                            className="w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 placeholder-zinc-400 focus:border-accent focus:ring-1 focus:ring-accent outline-hidden transition"
                           />
                         </div>
                         <div>
@@ -388,7 +388,7 @@ export function CartSidebar({ venue }: CartSidebarProps) {
                             required={fulfillmentType === "ship"}
                             value={shippingAddress.state}
                             onChange={(e) => handleShippingChange("state", e.target.value)}
-                            className="w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 placeholder-zinc-400 focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 outline-hidden transition"
+                            className="w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 placeholder-zinc-400 focus:border-accent focus:ring-1 focus:ring-accent outline-hidden transition"
                           />
                         </div>
                       </div>
@@ -405,7 +405,7 @@ export function CartSidebar({ venue }: CartSidebarProps) {
                             required={fulfillmentType === "ship"}
                             value={shippingAddress.postal_code}
                             onChange={(e) => handleShippingChange("postal_code", e.target.value)}
-                            className="w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 placeholder-zinc-400 focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 outline-hidden transition"
+                            className="w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 placeholder-zinc-400 focus:border-accent focus:ring-1 focus:ring-accent outline-hidden transition"
                           />
                         </div>
                         <div>
@@ -417,7 +417,7 @@ export function CartSidebar({ venue }: CartSidebarProps) {
                             required={fulfillmentType === "ship"}
                             value={shippingAddress.country}
                             onChange={(e) => handleShippingChange("country", e.target.value)}
-                            className="w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 placeholder-zinc-400 focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 outline-hidden transition"
+                            className="w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 placeholder-zinc-400 focus:border-accent focus:ring-1 focus:ring-accent outline-hidden transition"
                           >
                             <option value="US">United States</option>
                             <option value="CA">Canada</option>
@@ -440,7 +440,7 @@ export function CartSidebar({ venue }: CartSidebarProps) {
                   </div>
                   <div className="flex justify-between items-baseline pt-1 border-t border-zinc-100">
                     <span className="text-sm font-semibold text-zinc-900">Total</span>
-                    <span className="text-xl font-bold text-indigo-600">
+                    <span className="text-xl font-bold text-accent">
                       {formatPrice(subtotal)}
                     </span>
                   </div>
@@ -450,7 +450,7 @@ export function CartSidebar({ venue }: CartSidebarProps) {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full relative flex items-center justify-center gap-2 rounded-2xl py-3.5 text-sm font-bold text-white shadow-md hover:bg-indigo-700 active:brightness-90 disabled:opacity-50 disabled:pointer-events-none transition bg-indigo-600 shadow-indigo-600/20"
+                  className="w-full relative flex items-center justify-center gap-2 rounded-2xl py-3.5 text-sm font-bold text-white shadow-md hover:bg-zinc-800 active:brightness-90 disabled:opacity-50 disabled:pointer-events-none transition bg-zinc-900 shadow-zinc-900/10"
                 >
                   {loading ? (
                     <>

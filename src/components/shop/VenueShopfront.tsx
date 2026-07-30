@@ -20,7 +20,7 @@ export function VenueShopfront({ venue, products }: VenueShopfrontProps) {
 
   return (
     <div
-      className="min-h-dvh bg-zinc-50 text-zinc-900 flex flex-col relative"
+      className="min-h-dvh bg-stone-50 text-zinc-900 flex flex-col relative"
       style={
         {
           "--venue-brand": venue.brand_color_hex,
@@ -81,7 +81,7 @@ export function VenueShopfront({ venue, products }: VenueShopfrontProps) {
         <section className="mt-12 px-6">
           <div className="mb-6 flex items-center justify-between">
             <div className="flex items-center gap-3.5">
-              <div className="h-6 w-1 rounded-full bg-indigo-600" />
+              <div className="h-6 w-1 rounded-full bg-accent" />
               <div>
                 <h2 className="text-xl font-extrabold tracking-tight text-zinc-950">Merchandise</h2>
                 <p className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 pt-0.5">
@@ -96,7 +96,7 @@ export function VenueShopfront({ venue, products }: VenueShopfrontProps) {
                 className="inline-flex items-center gap-2 text-xs font-bold px-4 py-2 rounded-full bg-white shadow-sm hover:shadow-md text-zinc-950 transition-all duration-300 hover:-translate-y-0.5"
               >
                 <span>View Cart</span>
-                <span className="inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-indigo-600 px-1.5 text-[10px] font-extrabold text-white">
+                <span className="inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-accent px-1.5 text-[10px] font-extrabold text-white">
                   {totalItems}
                 </span>
               </button>
@@ -141,7 +141,7 @@ export function VenueShopfront({ venue, products }: VenueShopfrontProps) {
           </div>
           <div className="flex items-center gap-1.5 text-[10px] tracking-widest uppercase text-zinc-400 font-bold select-none pt-4">
             <span>Powered by</span>
-            <span className="text-indigo-600 tracking-normal font-extrabold">NearBuy</span>
+            <span className="text-accent tracking-normal font-extrabold">NearBuy</span>
           </div>
         </footer>
       </div>
@@ -170,7 +170,7 @@ export function VenueShopfront({ venue, products }: VenueShopfrontProps) {
         <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 w-full max-w-xs px-4 animate-bounce-short hidden md:block">
           <button
             onClick={() => setIsCartOpen(true)}
-            className="w-full flex items-center justify-between gap-3 rounded-full py-3.5 px-6 font-bold text-white bg-indigo-600 shadow-xl hover:bg-indigo-700 active:scale-98 transition-all duration-200 shadow-indigo-600/20"
+            className="w-full flex items-center justify-between gap-3 rounded-full py-3.5 px-6 font-bold text-white bg-zinc-900 shadow-xl hover:bg-zinc-800 active:scale-98 transition-all duration-200 shadow-zinc-900/20"
           >
             <div className="flex items-center gap-2.5">
               <div className="relative">
