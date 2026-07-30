@@ -8,10 +8,10 @@ export function Footer() {
           © 2026 NearBuy Platform. All rights reserved.
         </p>
         <div className="flex gap-6">
-          <Link href="/admin/orders" className="hover:text-indigo-600 transition-colors">
+          <Link href="/admin/orders" className="hover:text-premium-dark transition-colors">
             Dashboard
           </Link>
-          <Link href="/admin/qr" className="hover:text-indigo-600 transition-colors">
+          <Link href="/admin/qr" className="hover:text-premium-dark transition-colors">
             QR Generator
           </Link>
         </div>

@@ -13,6 +13,7 @@ CREATE TABLE IF NOT EXISTS venues (
     header_image_url TEXT,
     brand_color_hex TEXT NOT NULL DEFAULT '#10b981',
     notification_email TEXT NOT NULL,
+    location TEXT,
     created_at TIMESTAMPTZ DEFAULT NOW(),
     updated_at TIMESTAMPTZ DEFAULT NOW()
 );
@@ -44,7 +45,7 @@ CREATE TABLE IF NOT EXISTS orders (
 );
 
 -- Dummy Data for Emerald Roastery
-INSERT INTO venues (id, slug, name, logo_url, header_image_url, brand_color_hex, notification_email)
+INSERT INTO venues (id, slug, name, logo_url, header_image_url, brand_color_hex, notification_email, location)
 VALUES (
     '550e8400-e29b-41d4-a716-446655440000', 
     'emerald-roastery', 
@@ -52,7 +53,8 @@ VALUES (
     'https://placehold.co/160x160/10b981/ffffff/png?text=ER', 
     'https://placehold.co/1200x480/064e3b/ffffff/png?text=Emerald+Roastery', 
     '#10b981', 
-    'orders@emeraldroastery.example'
+    'orders@emeraldroastery.example',
+    'Seattle, WA'
 ) ON CONFLICT (slug) DO NOTHING;
 
 INSERT INTO products (venue_id, title, description, price, image_url, is_available)

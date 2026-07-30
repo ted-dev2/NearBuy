@@ -6,6 +6,7 @@ import { useCart } from "./CartContext";
 import { CartSidebar } from "./CartSidebar";
 import { ProductCard } from "@/components/shop/ProductCard";
 import type { Product, Venue } from "@/types/database";
+import { formatPrice } from "@/lib/formatPrice";
 
 type VenueShopfrontProps = {
   venue: Venue;
@@ -67,6 +68,11 @@ export function VenueShopfront({ venue, products }: VenueShopfrontProps) {
                 <h1 className="text-2xl font-extrabold tracking-tight text-zinc-950 leading-tight">
                   {venue.name}
                 </h1>
+                {venue.location && (
+                  <p className="text-xs font-medium text-zinc-500/70 mt-0.5">
+                    {venue.location}
+                  </p>
+                )}
               </div>
             </div>
           </div>
@@ -140,9 +146,28 @@ export function VenueShopfront({ venue, products }: VenueShopfrontProps) {
         </footer>
       </div>
 
-      {/* Floating Action Button (FAB) for Shopping Cart on Mobile */}
+      {/* Sticky Mobile Checkout Bar */}
       {totalItems > 0 && !isCartOpen && (
-        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 w-full max-w-xs px-4 animate-bounce-short">
+        <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-zinc-100 px-6 py-4 shadow-2xl md:hidden flex items-center justify-between">
+          <div className="flex flex-col">
+            <span className="text-[10px] text-zinc-500 font-extrabold uppercase tracking-wider">Total</span>
+            <span className="text-base font-black text-zinc-950">
+              {formatPrice(cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0))}
+            </span>
+          </div>
+          <button
+            onClick={() => setIsCartOpen(true)}
+            className="rounded-xl px-6 py-2.5 text-sm font-bold text-white shadow-md active:scale-98 transition-all"
+            style={{ backgroundColor: "var(--venue-brand)" }}
+          >
+            Checkout
+          </button>
+        </div>
+      )}
+
+      {/* Floating Action Button (FAB) for Shopping Cart on Mobile (now on Desktop/Tablet only) */}
+      {totalItems > 0 && !isCartOpen && (
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 w-full max-w-xs px-4 animate-bounce-short hidden md:block">
           <button
             onClick={() => setIsCartOpen(true)}
             className="w-full flex items-center justify-between gap-3 rounded-full py-3.5 px-6 font-bold text-white bg-indigo-600 shadow-xl hover:bg-indigo-700 active:scale-98 transition-all duration-200 shadow-indigo-600/20"

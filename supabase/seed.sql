@@ -7,7 +7,8 @@ INSERT INTO public.venues (
   logo_url,
   header_image_url,
   brand_color_hex,
-  notification_email
+  notification_email,
+  location
 )
 VALUES (
   'the-local-pub',
@@ -15,7 +16,8 @@ VALUES (
   'https://placehold.co/120x120/png',
   'https://placehold.co/800x300/png',
   '#1d4ed8',
-  'orders@thelocalpub.example'
+  'orders@thelocalpub.example',
+  'New York, NY'
 );
 
 INSERT INTO public.products (venue_id, title, description, price, image_url, is_available)

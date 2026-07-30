@@ -19,6 +19,7 @@ export type Venue = {
   header_image_url: string | null;
   brand_color_hex: string;
   notification_email: string;
+  location: string | null;
   created_at: string;
   updated_at: string;
 };

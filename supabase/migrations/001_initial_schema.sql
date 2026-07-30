@@ -17,6 +17,7 @@ CREATE TABLE public.venues (
   header_image_url TEXT,
   brand_color_hex TEXT NOT NULL DEFAULT '#2563eb',
   notification_email TEXT NOT NULL,
+  location TEXT,
   created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
   updated_at TIMESTAMPTZ NOT NULL DEFAULT now(),
   CONSTRAINT venues_slug_format CHECK (slug ~ '^[a-z0-9]+(?:-[a-z0-9]+)*$'),

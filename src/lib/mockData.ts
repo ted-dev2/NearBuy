@@ -10,6 +10,7 @@ export const mockVenue: Venue = {
   header_image_url: "https://placehold.co/1200x480/064e3b/ffffff/png?text=Emerald+Roastery",
   brand_color_hex: "#10b981",
   notification_email: "orders@emeraldroastery.example",
+  location: "Seattle, WA",
   created_at: MOCK_TIMESTAMP,
   updated_at: MOCK_TIMESTAMP,
 };

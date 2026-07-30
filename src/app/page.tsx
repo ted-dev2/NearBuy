@@ -12,7 +12,10 @@ export default function Home() {
       <section className="relative pt-36 pb-24 md:pt-48 md:pb-32 overflow-hidden bg-gradient-to-b from-indigo-50/30 via-white to-white">
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-xs font-black uppercase tracking-wider mb-8">
-            <span className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse" />
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
+            </span>
             Now Live for Local Merchants
           </div>
           
@@ -38,7 +41,7 @@ export default function Home() {
             
             <Link 
               href="/admin/orders" 
-              className="w-full sm:w-auto bg-white border-2 border-gray-100 text-gray-800 hover:bg-gray-50 active:scale-[0.98] px-8 py-4 rounded-2xl text-base font-black transition-all flex items-center justify-center gap-2"
+              className="w-full sm:w-auto bg-white border-2 border-gray-100 text-gray-800 hover:border-premium/50 hover:text-premium-dark active:scale-[0.98] px-8 py-4 rounded-2xl text-base font-black transition-all flex items-center justify-center gap-2"
             >
               Merchant Portal
             </Link>
@@ -142,35 +145,35 @@ export default function Home() {
               <div className="space-y-4">
                 <Link 
                   href="/shop/copper-hound" 
-                  className="flex items-center justify-between p-5 bg-white rounded-2xl border border-gray-100 hover:border-indigo-200 hover:shadow-sm transition-all group"
+                  className="flex items-center justify-between p-5 bg-white rounded-2xl border border-gray-100 hover:border-premium/50 hover:shadow-sm transition-all group"
                 >
                   <div>
-                    <h4 className="font-bold text-gray-950 group-hover:text-indigo-600 transition-colors">Copper Hound Shopfront</h4>
+                    <h4 className="font-bold text-gray-950 group-hover:text-premium-dark transition-colors">Copper Hound Shopfront</h4>
                     <p className="text-xs text-gray-500 mt-1">Browse products, test the guest checkout flow.</p>
                   </div>
-                  <svg className="w-5 h-5 text-gray-400 group-hover:text-indigo-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" /></svg>
+                  <svg className="w-5 h-5 text-gray-400 group-hover:text-premium-dark transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" /></svg>
                 </Link>
 
                 <Link 
                   href="/admin/orders" 
-                  className="flex items-center justify-between p-5 bg-white rounded-2xl border border-gray-100 hover:border-indigo-200 hover:shadow-sm transition-all group"
+                  className="flex items-center justify-between p-5 bg-white rounded-2xl border border-gray-100 hover:border-premium/50 hover:shadow-sm transition-all group"
                 >
                   <div>
-                    <h4 className="font-bold text-gray-950 group-hover:text-indigo-600 transition-colors">Merchant Dashboard</h4>
+                    <h4 className="font-bold text-gray-950 group-hover:text-premium-dark transition-colors">Merchant Dashboard</h4>
                     <p className="text-xs text-gray-500 mt-1">View incoming orders, manage fulfillment.</p>
                   </div>
-                  <svg className="w-5 h-5 text-gray-400 group-hover:text-indigo-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" /></svg>
+                  <svg className="w-5 h-5 text-gray-400 group-hover:text-premium-dark transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" /></svg>
                 </Link>
 
                 <Link 
                   href="/admin/qr" 
-                  className="flex items-center justify-between p-5 bg-white rounded-2xl border border-gray-100 hover:border-indigo-200 hover:shadow-sm transition-all group"
+                  className="flex items-center justify-between p-5 bg-white rounded-2xl border border-gray-100 hover:border-premium/50 hover:shadow-sm transition-all group"
                 >
                   <div>
-                    <h4 className="font-bold text-gray-950 group-hover:text-indigo-600 transition-colors">Printable QR Codes</h4>
+                    <h4 className="font-bold text-gray-950 group-hover:text-premium-dark transition-colors">Printable QR Codes</h4>
                     <p className="text-xs text-gray-500 mt-1">Generate and download QR codes for physical tables.</p>
                   </div>
-                  <svg className="w-5 h-5 text-gray-400 group-hover:text-indigo-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" /></svg>
+                  <svg className="w-5 h-5 text-gray-400 group-hover:text-premium-dark transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" /></svg>
                 </Link>
               </div>
             </div>

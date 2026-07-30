@@ -39,9 +39,14 @@ export function ProductCard({ product, onClick }: ProductCardProps) {
             </p>
           ) : null}
         </div>
-        <p className="pt-1 text-base font-extrabold text-indigo-600">
-          {formatPrice(product.price)}
-        </p>
+        <div className="pt-1">
+          <p className="text-xs text-zinc-400 font-light mb-1">
+            Pickup available
+          </p>
+          <p className="text-base font-extrabold text-indigo-600">
+            {formatPrice(product.price)}
+          </p>
+        </div>
       </div>
     </article>
   );
