@@ -41,6 +41,8 @@ export type Order = {
   venue_id: string;
   customer_email: string;
   total_amount: number;
+  venue_commission: number;
+  total_items: number;
   fulfillment_type: FulfillmentType;
   status: OrderStatus;
   shipping_address: ShippingAddress | null;

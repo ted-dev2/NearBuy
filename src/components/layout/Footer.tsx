@@ -8,7 +8,7 @@ export function Footer() {
           © 2026 NearBuy Platform. All rights reserved.
         </p>
         <div className="flex gap-6">
-          <Link href="/admin/orders" className="hover:text-accent transition-colors">
+          <Link href="/admin" className="hover:text-accent transition-colors">
             Dashboard
           </Link>
           <Link href="/admin/qr" className="hover:text-accent transition-colors">

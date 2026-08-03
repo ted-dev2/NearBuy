@@ -36,7 +36,7 @@ export function Header() {
           <Link href="/#how-it-works" className={linkClass("/#how-it-works")}>
             How it Works
           </Link>
-          <Link href="/admin/orders" className={linkClass("/admin/orders")}>
+          <Link href="/admin" className={linkClass("/admin")}>
             Merchant Dashboard
           </Link>
           <Link href="/admin/qr" className={linkClass("/admin/qr")}>

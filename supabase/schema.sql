@@ -37,6 +37,8 @@ CREATE TABLE IF NOT EXISTS orders (
     venue_id UUID NOT NULL REFERENCES venues(id) ON DELETE CASCADE,
     customer_email TEXT NOT NULL,
     total_amount INTEGER NOT NULL, -- in cents
+    venue_commission INTEGER DEFAULT 0, -- in cents
+    total_items INTEGER DEFAULT 1,
     fulfillment_type fulfillment_type NOT NULL,
     status order_status NOT NULL DEFAULT 'pending',
     shipping_address JSONB, -- store structured address

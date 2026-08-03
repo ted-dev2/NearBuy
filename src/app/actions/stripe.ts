@@ -92,6 +92,12 @@ export async function createCheckoutSession({
       (sum, item) => sum + item.price * item.quantity,
       0
     );
+    const totalItems = cartItems.reduce(
+      (sum, item) => sum + item.quantity,
+      0
+    );
+    // 15% commission for the venue
+    const venueCommission = Math.round(totalAmount * 0.15);
 
     // Use any cast to bypass strict table name checking if inference is failing
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -100,6 +106,8 @@ export async function createCheckoutSession({
         venue_id: venueId,
         customer_email: email,
         total_amount: totalAmount,
+        venue_commission: venueCommission,
+        total_items: totalItems,
         fulfillment_type: fulfillmentType,
         status: "pending" as const,
         shipping_address: shippingAddress || null,

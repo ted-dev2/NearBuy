@@ -40,7 +40,7 @@ export default function Home() {
             </Link>
             
             <Link 
-              href="/admin/orders" 
+              href="/admin" 
               className="w-full sm:w-auto bg-white border border-zinc-200 text-zinc-900 hover:bg-stone-50 active:scale-[0.98] px-8 py-4 rounded-2xl text-base font-black transition-all flex items-center justify-center gap-2"
             >
               Merchant Portal
@@ -155,12 +155,12 @@ export default function Home() {
                 </Link>
 
                 <Link 
-                  href="/admin/orders" 
+                  href="/admin" 
                   className="flex items-center justify-between p-5 bg-white rounded-2xl border border-zinc-100 hover:border-accent/50 hover:shadow-sm transition-all group"
                 >
                   <div>
                     <h4 className="font-bold text-zinc-900 group-hover:text-accent transition-colors">Merchant Dashboard</h4>
-                    <p className="text-xs text-zinc-500 mt-1">View incoming orders, manage fulfillment.</p>
+                    <p className="text-xs text-zinc-500 mt-1">View partner sales performance and earnings.</p>
                   </div>
                   <svg className="w-5 h-5 text-gray-400 group-hover:text-accent transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" /></svg>
                 </Link>

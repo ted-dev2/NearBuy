@@ -16,6 +16,6 @@ export async function fulfillOrder(orderId: string) {
     return { error: "Failed to fulfill order" };
   }
 
-  revalidatePath("/admin/orders");
+  revalidatePath("/admin");
   return { success: true };
 }
